@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AR Maze 3x3m</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <!-- DOM Overlay HUD -->
+  <div id="overlay" class="overlay">
+    <div class="row">
+      <button id="btnPlace">Platzieren</button>
+      <button id="btnStart" disabled>Start (20s)</button>
+      <button id="btnReset" disabled>Reset</button>
+    </div>
+    <div class="row">
+      <span>Timer: <strong id="timer">—</strong></span>
+      <span class="sep">|</span>
+      <span>Status: <strong id="status">Nicht platziert</strong></span>
+    </div>
+  </div>
+  <!-- AR Mount -->
+  <div id="ar-root"></div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
