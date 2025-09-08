@@ -1,14 +1,17 @@
-html, body { margin:0; padding:0; height:100%; font-family: system-ui, sans-serif; }
-.overlay {
-  position: fixed; left: 0; right: 0; top: 0; padding: 10px 12px;
-  display: flex; flex-direction: column; gap: 8px;
-  background: rgba(0,0,0,0.25); color: #fff; z-index: 10;
-  -webkit-user-select: none; user-select: none;
+html, body { margin:0; padding:0; height:100%; background:transparent; }
+#hud {
+  position: fixed; inset: 0;
+  display: flex; flex-direction: column;
+  align-items: center; gap: 8px; padding: 12px;
+  pointer-events: none; font-family: system-ui, sans-serif;
 }
-.overlay .row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-.overlay button {
-  padding: 8px 12px; border-radius: 8px; border: 0; background: #2e7; color: #062;
-  font-weight: 600; cursor: pointer;
+#status {
+  margin-top: 8px; padding: 6px 10px; border-radius: 10px;
+  backdrop-filter: blur(6px);
+  background: rgba(0,0,0,.35); color: #fff; font-weight: 600;
 }
-.overlay button:disabled { opacity: 0.5; cursor: not-allowed; }
-.overlay .sep { opacity: .7; }
+#controls { pointer-events: auto; }
+#resetBtn {
+  padding: 8px 12px; border-radius: 10px; border: none;
+  background: #fff; font-weight: 600; cursor: pointer;
+}
